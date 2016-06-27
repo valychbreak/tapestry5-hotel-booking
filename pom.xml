@@ -176,7 +176,7 @@
 			<plugin>
 				<groupId>org.apache.tapestry</groupId>
 				<artifactId>tapestry-component-report</artifactId>
-				<version>${tapestry-release-version}</version>
+				<version>5.2.6</version>
 				<configuration>
 					<rootPackage>com.tap5.hotelbooking</rootPackage>
 				</configuration>
@@ -194,10 +194,16 @@
 			<id>apache</id>
 			<url>https://repository.apache.org/content/groups/public/</url>
 		</repository>
+
 		<repository>
 			<id>google-maven-snapshot-repository</id>
 			<name>Google Maven Snapshot Repository</name>
 			<url>https://m2repos.googlecode.com/svn/nexus</url>
+		</repository>
+
+		<repository>
+			<id>sonatype-forge</id>
+			<url>https://repository.sonatype.org/content/groups/forge/</url>
 		</repository>
 	</repositories>
 
