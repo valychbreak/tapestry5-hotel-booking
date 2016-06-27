@@ -26,6 +26,7 @@
         <table t:type="grid" t:source="dataSource" t:inPlace="true" t:rowsPerPage="criteria.rowsPerPage" t:include="username,fullname,email" t:row="currentUser">
             <p:empty>
                 <p class="empty-result">${message:no-result}</p>
+                <table t:type="grid" t:source="allUsers" t:inPlace="true" t:rowsPerPage="criteria.rowsPerPage" t:include="username,fullname,email" t:row="currentUser" />
             </p:empty>
         </table>
     </div>

@@ -35,6 +35,9 @@ public class Users {
     private GridDataSource dataSource = new UserGridDataSource(this.session, User.class);
 
     @Property
+    private GridDataSource allUsers = new HibernateGridDataSource(this.session, User.class);
+
+    @Property
     private User currentUser;
 
     @OnEvent(value = EventConstants.SUCCESS)
@@ -47,8 +50,11 @@ public class Users {
     }
 
     private final class UserGridDataSource extends HibernateGridDataSource {
+        Session session;
+
         public UserGridDataSource(Session session, Class entityType) {
             super(session, entityType);
+            this.session = session;
         }
 
         @Override
@@ -59,6 +65,7 @@ public class Users {
         @Override
         protected void applyAdditionalConstraints(Criteria crit) {
             crit.add(Restrictions.ilike("username", criteria.getSearchPattern()));
+
         }
     }
 }
