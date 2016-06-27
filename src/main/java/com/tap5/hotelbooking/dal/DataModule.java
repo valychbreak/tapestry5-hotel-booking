@@ -37,6 +37,7 @@ public class DataModule
         users.add(new User("Christophe Cordenier", "cordenier", "ccordenier@example.com",
                 "cordenier"));
         users.add(new User("Katia Aresti", "karesti", "karesti@example.com", "karesti"));
+        users.add(new User("Test Test" , "test", "t@t.com", "123456"));
 
         hotels.add(new Hotel(129, 3, "Marriott Courtyard", "Tower Place, Buckhead", "Atlanta",
                 "GA", "30305", "USA"));
