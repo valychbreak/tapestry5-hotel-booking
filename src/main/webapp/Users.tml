@@ -1,0 +1,33 @@
+<html t:type="layout" t:pageTitle="Search for a user"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
+
+    <h2>Search a user</h2>
+
+    <form t:type="form" t:zone="userResult" t:id="searchForm" class="full-form" >
+        <table>
+            <tr>
+                <th>
+                    <label t:type="label" t:for="query">Search</label>
+                </th>
+                <td><input type="text" t:type="textfield" t:id="query" t:value="criteria.query" /></td>
+                <th><label t:type="label" t:for="rowsPerPage">Results</label></th>
+                <td><select t:type="select" t:id="rowsPerPage" t:value="criteria.rowsPerPage" t:model="literal:5,10,15,20"></select></td>
+            </tr>
+        </table>
+        <div class="form-submit">
+            <input type="submit" t:type="submit" class="btn-active" value="Search" /> or <a href="#">cancel</a>
+            <span t:type="ajaxloader" t:trigger="searchForm" t:zone="userResult"></span>
+        </div>
+    </form>
+
+    <!-- Result area -->
+    <div t:type="zone" t:id="userResult" id="userResult" class="section result">
+        <table t:type="grid" t:source="dataSource" t:inPlace="true" t:rowsPerPage="criteria.rowsPerPage" t:include="username,fullname,email" t:row="currentUser">
+            <p:empty>
+                <p class="empty-result">${message:no-result}</p>
+            </p:empty>
+        </table>
+    </div>
+
+</html>

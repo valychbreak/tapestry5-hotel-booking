@@ -12,6 +12,9 @@
 					<a href="#" t:type="pageLink" t:page="search">Search</a>
 				</li>
 				<li>
+					<a href="#" t:type="pagelink" t:page="users">Users</a>
+				</li>
+				<li>
 					<a href="#" t:type="pageLink" t:page="settings">Settings</a>
 				</li>
 				<li class="last">
