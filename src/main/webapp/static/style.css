@@ -20,7 +20,7 @@ h1 { margin:0px 15px; float:left; width: 650px; }
 h2, h3 { font-family: Georgia, serif; font-weight:normal; font-size:21px; color: #569D2F; }
 
 a { color:#569D2F; font-weight: normal; text-decoration: underline; }
-a img { text-decoration:none; }
+/*a img { text-decoration:none; }*/
 
 p { margin-bottom:10px; line-height:1.3em; }
 
