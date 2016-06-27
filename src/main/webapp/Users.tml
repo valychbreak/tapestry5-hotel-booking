@@ -23,7 +23,10 @@
 
     <!-- Result area -->
     <div t:type="zone" t:id="userResult" id="userResult" class="section result">
-        <table t:type="grid" t:source="dataSource" t:inPlace="true" t:rowsPerPage="criteria.rowsPerPage" t:include="username,fullname,email" t:row="currentUser">
+        <table t:type="grid" t:source="dataSource" t:inPlace="true" t:rowsPerPage="criteria.rowsPerPage" t:include="username,fullname,email" t:add="actions" t:row="currentUser">
+            <p:actionsCell>
+                <a href="#" t:type="pagelink" t:context="currentUser" t:page="settings">Edit</a>
+            </p:actionsCell>
             <p:empty>
                 <p class="empty-result">${message:no-result}</p>
                 <table t:type="grid" t:source="allUsers" t:inPlace="true" t:rowsPerPage="criteria.rowsPerPage" t:include="username,fullname,email" t:row="currentUser" />
